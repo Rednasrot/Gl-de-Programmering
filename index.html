@@ -4,10 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title> Min Nettside </title>
+    <title>Min Nettside</title>
     <style>
-      
-
         body {
             margin: 0;
             font-family: system-ui, sans-serif;
@@ -43,6 +41,8 @@
         }
 
         main {
+            display: flex; /* Bruker flexbox for å plassere innhold */
+            justify-content: space-between; /* Plasserer innhold til venstre og høyre */
             padding: 1rem;
         }
 
@@ -50,6 +50,7 @@
             font-weight: bold;
             font-size: 1.5rem;
             text-align: center;
+            flex: 1; /* Tar opp ledig plass i midten */
         }
 
         #boks1 {
@@ -80,21 +81,18 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            color: white; /* Juster fargen som passer til bildet */
-            font-size: 1.5rem; /* Juster størrelsen etter behov */
-            text-decoration: solid;
+            color: white;
+            font-size: 1.5rem;
         }
 
-        center {
-            margin: auto;
-            width: 50%;
-            padding: 10px;
+        aside {
+            flex: 1; /* Tar opp like mye plass som hovedinnhold */
+            text-align: center; /* Justerer innholdet i aside */
         }
 
-        div.relative {
-            position: relative;
-            left: 30px;
-            border: 3px solid #73AD21;
+        footer {
+            text-align: center; /* Sentraliserer innholdet i footeren */
+            margin-top: 20px;
         }
     </style>
 </head>
@@ -107,30 +105,31 @@
 </nav>
 
 <main>
-    <h1>Dette er fantastisk!</h1>
-    <center><div id="boks1"> Click </div> </center>
-   <center> <div class="image-container">
-        <img src="/Bilder/profilbilde.jpg" alt="Beskrivelse av bildet">
-        <div class="text-overlay">Livets lange løp</div> </center>
-
-<aside>
-
-
-
-</aside>
+    <aside>
+        <p>Innhold til venstre</p>
+    </aside>
     
+    <div>
+        <h1>Dette er fantastisk!</h1>
+       <center> <div id="boks1">Click</div>
+        <div class="image-container">
+            <img src="/Bilder/profilbilde.jpg" alt="Beskrivelse av bildet">
+            <div class="text-overlay">Livets lange løp</div> </center>
+        </div>
+    </div>
 
-    <footer>
-  
-<center><H1> Mine topp 5 spill</H1>
-<p> 1. World of Warcraft: Mists of Pandaria</p>
-<p> 2. Phasmophobia </p>
-<p> 3. Fortnite </p>
-<p> 4. Counter-Strike: Global Offensive  </p>
-
-</center>
-    </footer>
+    <aside>
+        <p>Innhold til høyre</p>
+    </aside>
 </main>
+
+<footer>
+    <h1>Mine topp 5 spill</h1>
+    <p>1. World of Warcraft: Mists of Pandaria</p>
+    <p>2. Phasmophobia</p>
+    <p>3. Fortnite</p>
+    <p>4. Counter-Strike: Global Offensive</p>
+</footer>
 
 </body>
 </html>
