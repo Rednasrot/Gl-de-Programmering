@@ -1,4 +1,5 @@
-* {
+* 
+{
   box-sizing: border-box;
 }
 
@@ -6,9 +7,10 @@ body {
   margin: 0;
   font-family: system-ui, sans-serif;
   color: black;
-  background-color: white;
+  background-color: grey;
 }
 
+/* Dette er en navigasjonsbar*/
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -37,16 +39,45 @@ nav a[aria-current='page'] {
 }
 
 main {
-  padding: 1rem;
+  display: flex; /* Bruker flexbox for å plassere innhold */
+            justify-content: space-between; /* Plasserer innhold til venstre og høyre */
+            padding: 1rem;
 }
 
 h1 {
   font-weight: bold;
   font-size: 1.5rem;
+  text-align: center;
+  flex: 1; /* Tar opp ledig plass i midten */
 }
-  p {
-    text-decoration: underline;
 
+#boks1 {
+  border-radius: 25px;
+  width: 180px;
+  height: 50px;
+  padding: 10px;
+  border: 5px solid turquoise;
+  margin: 10px;
+  text-align: center;
+}
+
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  text-align: center;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+}
+
+
+p {
+    text-decoration: underline;
 
   }
 
@@ -58,4 +89,12 @@ h1 {
 
 }
 
+aside {
+  flex: 1; /* Tar opp like mye plass som hovedinnhold */
+  text-align: center; /* Justerer innholdet i aside */
+}
 
+footer {
+  text-align: center; /* Sentraliserer innholdet i footeren */
+  margin-top: 20px;
+}
