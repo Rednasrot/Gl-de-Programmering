@@ -98,3 +98,30 @@ footer {
   text-align: center; /* Sentraliserer innholdet i footeren */
   margin-top: 20px;
 }
+
+
+/* Plasserer skygger for å gjøre det om til ett kort*/
+.kort {
+box-shadow:0 4px 8px 0 rgba(0,0,0,0.2);
+transition: 0.3s;
+width: 1000px;
+flex-direction: row;
+}
+
+/* Plassere dypere skygger når du plasserer pekeren oppå bildet. Dette er for å gjøre det mer interaktiv.*/
+.kort:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+
+}
+
+/*Plasserer mer padding inni containeren for å utheve denne mer*/
+.container {
+  padding: 2px 16px;
+
+
+}
+
+.Topp5spill {
+
+
+}
