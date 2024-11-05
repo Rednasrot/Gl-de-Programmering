@@ -6,7 +6,7 @@
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
-  color: black;
+  color: white;
   background-color: grey;
 }
 
@@ -34,8 +34,8 @@ nav a {
 }
 
 nav a[aria-current='page'] {
-  color: #000;
-  background-color: #d4d4d4;
+  color: white;
+  background-color: grey;
 }
 
 main {
@@ -76,7 +76,7 @@ img {
 
 
 p {
-    text-decoration: underline;
+
 
   }
 
@@ -89,8 +89,13 @@ p {
 }
 
 aside {
+  background-color: grey;
+  color: white;
+  display: flex;
   flex: 1; /* Tar opp like mye plass som hovedinnhold */
   text-align: center; /* Justerer innholdet i aside */
+  justify-content: center;
+  align-items: center;
 }
 
 footer {
