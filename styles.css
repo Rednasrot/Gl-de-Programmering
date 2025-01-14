@@ -3,6 +3,15 @@
   box-sizing: border-box;
 }
 
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(17, 16, 16);
+  font-size: 1.5rem;
+}
+
 body {
   margin: 0;
   font-family: system-ui, sans-serif;
@@ -48,10 +57,12 @@ main {
 }
 
 h1 {
+  color: rgb(45, 42, 42);
   font-weight: bold;
   font-size: 1.5rem;
   text-align: center;
   flex: 1; /* Tar opp ledig plass i midten */
+  font-family: fantasy;
 }
 
 
@@ -71,6 +82,7 @@ R.I.P Boks1 12.11.2024 */
 
 
 .image-container {
+  display: flex;
   position: relative;
   display: inline-block;
   text-align: center;
@@ -82,25 +94,13 @@ img {
   width: 50%;
 }
 
-@media only screen and (max-width: 360px) {
-  nav {
-
-  }
-
-
-}
-
 p {
 
 
   }
 
 .text-overlay {
-
-  font-family: 'Times New Roman', Times, serif;
-
-
-
+  font-family: fantasy
 }
 
 aside {
@@ -159,4 +159,9 @@ width: 15rem;
 .Topp5spill {
 
 
+}
+
+#om-meg {
+  text-align: center;
+  margin: 1rem 0;
 }
