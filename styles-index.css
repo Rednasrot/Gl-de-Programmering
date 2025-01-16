@@ -49,11 +49,17 @@ nav a[aria-current='page'] {
   background-color: grey;
 }
 
-main {
-  display: flex; /* Bruker flexbox for å plassere innhold */
-  justify-content: space-between; /* Plasserer innhold til venstre og høyre */
+.main-index {
+  display: flex; /* Bruker flexbox for å plassere innhold */ /* Plasserer innhold til venstre og høyre */
   padding: 1rem;
   align-items: center; 
+}
+
+.main-om-meg {
+  padding: 1rem;
+  align-items: center;
+
+
 }
 
 h1 {
@@ -93,11 +99,6 @@ img {
   margin-right: auto;
   width: 50%;
 }
-
-p {
-
-
-  }
 
 .text-overlay {
   font-family: fantasy
@@ -156,12 +157,9 @@ width: 15rem;
 
 }
 
-.Topp5spill {
-
-
-}
-
-#om-meg {
-  text-align: center;
-  margin: 1rem 0;
+h2 {
+  display: flex;
+  flex-direction: column;
+  text-align: top;
+  margin: 1rem;
 }
