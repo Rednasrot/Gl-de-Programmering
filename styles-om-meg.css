@@ -2,15 +2,6 @@
     box-sizing: border-box;
   }
   
-  .text-overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: rgb(17, 16, 16);
-    font-size: 1.5rem;
-  }
-  
   body {
     margin: 0;
     font-family: system-ui, sans-serif;
@@ -46,4 +37,12 @@
   nav a[aria-current='page'] {
     color: white;
     background-color: grey;
+  }
+
+  h1 {
+    color: black;
+
+
+
+
   }
