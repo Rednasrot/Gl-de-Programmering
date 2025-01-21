@@ -163,3 +163,10 @@ h2 {
   text-align: top;
   margin: 1rem;
 }
+
+.pokeShowcase {
+display: flex;
+align-items: center;
+flex-direction: column;
+margin-top: 2%;
+}
