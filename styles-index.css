@@ -3,22 +3,6 @@
   box-sizing: border-box;
 }
 
-.text-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: rgb(17, 16, 16);
-  font-size: 1.5rem;
-}
-
-body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  color: white;
-  background-color: grey;
-}
-
 /* Dette er en navigasjonsbahar. 
 Update: Har gjort slik at Nav Baren følger med når man scroller, interaktiv*/
 nav {
@@ -44,22 +28,33 @@ nav a {
   color: #555;
 }
 
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: rgb(17, 16, 16);
+  font-size: 1.5rem;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  color: white;
+  background-color: grey;
+}
+
+
+
 nav a[aria-current='page'] {
   color: white;
   background-color: grey;
 }
 
-.main-index {
+.main {
   display: flex; /* Bruker flexbox for å plassere innhold */ /* Plasserer innhold til venstre og høyre */
   padding: 1rem;
   align-items: center; 
-}
-
-.main-om-meg {
-  padding: 1rem;
-  align-items: center;
-
-
 }
 
 h1 {
@@ -75,7 +70,7 @@ h1 {
 /* Denne boksen er fjernet, jeg la koden være igjen slik at du kunne også få med deg denne kommentaren.
 Jeg sleit med å legge inn kode for å få den sentrert og så ikke lenger bruken til denne på bakgrunn av NAV-Baren 
 R.I.P Boks1 12.11.2024 */
-#boks1 {
+/* #boks1 {
   align-items: center;
   border-radius: 25px;
   width: 5rem;
@@ -84,34 +79,39 @@ R.I.P Boks1 12.11.2024 */
   border: 5px solid turquoise;
   margin: 10px;
   text-align: center;
+} */
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 5%;
+  align-items: center;
+  gap: 1rem; /* Juster avstand mellom elementene etter behov */
 }
 
 
 .image-container {
-  display: flex;
+  flex: 2; /* Bildecontainer får mer plass */
   position: relative;
-  display: inline-block;
   text-align: center;
 }
 
+
 img {
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+  width: 75%;
+  height: auto;
 }
 
 .text-overlay {
-  font-family: fantasy
+  font-family: fantasy;
 }
 
 aside {
+  flex: 1;
   background-color: grey;
   color: white;
-  display: flex;
-  flex: 1; /* Tar opp like mye plass som hovedinnhold */
-  text-align: center; /* Justerer innholdet i aside */
-  justify-content: center;
-  align-items: center;
+  padding: 1rem;
+  text-align: center;
 }
 
 footer {

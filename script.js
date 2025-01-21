@@ -1,5 +1,10 @@
-async function getPokemonData(id) {
-    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
+const pokemonInput = document.querySelector('#pokemon-input')
+
+
+
+
+async function getPokemonData(pokemonName) {
+    const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
     console.log(response);
     const data = await response.json();
     console.log(data);
@@ -7,9 +12,10 @@ async function getPokemonData(id) {
     return data;
   }
   
-  async function displayPokemonData() {
-    const id = 384; // 132 gives ditto
-    const pokemonData = await getPokemonData(id);
+  async function displayPokemonData(event) {
+    if (event.key !== 'Enter') return
+    const pokemonName = pokemonInput.value.toLowerCase(); // 132 gives ditto
+    const pokemonData = await getPokemonData(pokemonName);
     console.log(pokemonData.sprites.front_shiny);
     // Denne måten finner jeg ulike pokemon sine sprites for hver . så spesifiserer jeg mer og mer hvilke data jeg vil ha i denne sammenhengen
     console.log(pokemonData.stats[1].base_stat); // Denne koden er for å finne Attack staten altså tallet, dette er nummer 1
@@ -25,7 +31,7 @@ async function getPokemonData(id) {
     const pokemonCard = `
     <div>
     <h2>${pokemonData.id}. ${pokemonData.name}</h2>
-    <img src="${pokemonData.sprites.front_default}" alt="${pokemonData.name}">
+    <img src="${pokemonData.sprites.front_shiny}" alt="${pokemonData.name}">
     <ul>
       ${pokemonData.stats
         .map(
@@ -45,4 +51,6 @@ async function getPokemonData(id) {
     document.getElementById('pokeDex').innerHTML = pokemonCard;
   }
   
+pokemonInput.addEventListener("keyup", displayPokemonData)
+
   displayPokemonData();
